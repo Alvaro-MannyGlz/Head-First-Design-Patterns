@@ -39,6 +39,7 @@ public class WeatherData implements Subject {
 		this.temperature = temperature;
 		this.humidity = humidity;
 		this.pressure = pressure;
+		// new parameters
 		this.wind = wind;
 		this.dewPoint = dewPoint;
 		this.uvIndex = uvIndex;

@@ -2,6 +2,9 @@ package headfirst.designpatterns.observer.weather;
 
 import java.util.*;
 
+import headfirst.designpatterns.observer.weather.DisplayElement;
+import headfirst.designpatterns.observer.weather.WeatherData;
+
 public class WeatherToday implements Observer, DisplayElement {
   private float temperature;
   private float humidity;
@@ -16,7 +19,8 @@ public class WeatherToday implements Observer, DisplayElement {
     weatherData.registerObserver(this);
   }
 
-  public void update(float temperature, float humidity, float pressure, float wind, float dewPoint, float uvIndex) {
+  public void update(float temperature, float humidity, float pressure, 
+                       float wind, float dewPoint, float uvIndex) {
     this.temperature = temperature;
     this.humidity = humidity;
     this.pressure = pressure;

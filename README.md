@@ -9,3 +9,5 @@ Other links for the book are available on the book page at <a href="http://wicke
 # Software Engineering Update 
 
 By forking this weather code your task will be to add a "Weather Today" display that shows Wind, Dew Point, and UV Index.
+
+![alt text](image.png)
