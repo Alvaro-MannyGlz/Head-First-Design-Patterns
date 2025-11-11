@@ -7,6 +7,9 @@ public class WeatherData implements Subject {
 	private float temperature;
 	private float humidity;
 	private float pressure;
+	private float wind;
+	private float dewPoint;
+	private float uvIndex;
 	
 	public WeatherData() {
 		observers = new ArrayList<Observer>();
@@ -22,7 +25,8 @@ public class WeatherData implements Subject {
 	
 	public void notifyObservers() {
 		for (Observer observer : observers) {
-			observer.update(temperature, humidity, pressure);
+			// added wind, dewPoint, uvIndex parameters
+			observer.update(temperature, humidity, pressure, wind, dewPoint, uvIndex);
 		}
 	}
 	
@@ -30,10 +34,14 @@ public class WeatherData implements Subject {
 		notifyObservers();
 	}
 	
-	public void setMeasurements(float temperature, float humidity, float pressure) {
+	// added wind, dewPoint, uvIndex parameters
+	public void setMeasurements(float temperature, float humidity, float pressure, float wind, float dewPoint, float uvIndex) {
 		this.temperature = temperature;
 		this.humidity = humidity;
 		this.pressure = pressure;
+		this.wind = wind;
+		this.dewPoint = dewPoint;
+		this.uvIndex = uvIndex;
 		measurementsChanged();
 	}
 
@@ -47,6 +55,18 @@ public class WeatherData implements Subject {
 	
 	public float getPressure() {
 		return pressure;
+	}
+
+	public float getWind() {
+		return wind;
+	}
+
+	public float getDewPoint() {
+		return dewPoint;
+	}
+
+	public float getUVIndex() {
+		return uvIndex;
 	}
 
 }

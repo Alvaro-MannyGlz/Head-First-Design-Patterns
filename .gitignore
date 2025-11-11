@@ -1,0 +1,14 @@
+# Compiled Java Class Files
+*.class
+
+# Build and Compilation Artifacts
+*.jar
+*.war
+*.ear
+/target/ # Maven build output
+/build/  # Gradle build output
+
+# IDE and OS Files
+.vscode/
+.idea/
+.DS_Store
